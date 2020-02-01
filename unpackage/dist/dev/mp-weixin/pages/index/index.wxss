@@ -1,0 +1,261 @@
+@font-face {font-family: "iconfont";
+ src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKoAAsAAAAABlAAAAJcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApccAE2AiQDCAsGAAQgBYRtBy0bkwXILrBt2JNGRBd3xx0/PGhtwMAoRPC1H7rv7kIIFkgDquiwcFGRUYmtMK2RNb7jWVf/7efefGJhc/6zBBqwQlvMazm9NKPzs1N2Sk3ITbj9762/DddxPc/GlRaN5acnyE3XKRxg5Ks/3HRTavV5Lqd3VwEFMj9QjnvRGsMKMO75vUD3wDZZmSTeMHaBSzhPoNGoscrxxd0jtBXWtEC8RIED7ZxXUViiXqitWVtSfEKN+vROP+Aj/H78E0Y9SU1mlZzdnftw+MlOyajQrU+Aj4A21yBjGSjEVW30RE0wdk1jtG4S7Ksw+KmqfIvYq1Gwv87KbwbDUHRPYldyq4kEtyXq0z026vHE8Gufva3ZDKn564wL19OXJd8Ia/m21WeSvvtgFqLy+iH6RSv4CbnIrXH0cyNwAKgwKwYqCHYGDrfWKP5f31TAj3a/qLvCAv3soH5ftuCf0BUGhUutaCpooQ8kw+dqaNSICpCz099YXc8NJEO9nhH2OiMpsnrTZGEto0aTbdSqt4dGSy43N+kiaqI0YNEnQGj3jaTVd2TtfsjC+kWNXv+o1R4ZjW7C3bPJbDx2pZCj5KP7gZHHuXGs2o0K7yl4SR3JSkPOM0kZBXCxul5MXFJOMseC8jVYqho0whlegMsoTRkL4Zg8nYaqxWq2dlf3pqnHGXQdEcShiA+5PqCIh+WM3191S5+/RwIvUg5p6agJPyOiFA2PFqbmPchLVd6r416uKb0KLCllIEOwDLoAo0gqxVBRPypGPGoqHBEurMzsXqavarq+Jvu6A9DI0qewK7L84DAAAAA=') format('woff2');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-hao:before {
+  content: "\E66E";
+}
+.todo-header{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	z-index: 99;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 45px;
+	box-shadow: -1px 1px 5px 0 rgba(0,0,0,.1 );
+	background-color: #fff;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	color: #333333;
+	font-size: 12px;
+	padding: 0 15px;
+}
+.todo-header_left{
+	width: 100%;
+}
+.active-text{
+	color: #279ABF;
+	font-size: 14px;
+	padding-right: 10px;
+}
+.todo-header_right{
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.todo-header_right-item{
+	padding: 0 5px;
+}
+.active-tab{
+	color:#279abf
+}
+.todo-content{
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.todo-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	position: relative;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 10px;
+	font-size: 14px;
+	color:#0c3854;
+	background: #cfebfd;
+	box-shadow: -1px 1px 5px 1px rgba(0,0,0,.1),
+	-1px 2px 1px 0 rgba(255,255,255) inset;
+	overflow: hidden;
+}
+.todo-list:after{
+	position: absolute;
+	content:'';
+	top:0;
+	left:0;
+	bottom: 0;
+	width: 5px;
+	background: #91d1e8;
+}
+.todo-list_checkbox{
+	padding-right: 15px;
+}
+.checkbox{
+	width: 20px;
+	height: 20px;
+	border-radius:50%;
+	background: #fff;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+}
+.todo--finish .checkbox{
+	position: relative;
+	background: #eee;
+}
+.todo--finish .checkbox:after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 50%;
+	background: #CFEBFD;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.2) inset;
+}
+.todo--finish .todo-list_content{
+	color: #999;
+}
+.todo--finish.todo-list:before{
+	content: "";
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	margin: auto 0;
+	background: #bdcdd8;
+}
+.todo--finish.todo-list:after{
+	background: #ccc;
+}
+.create-todo{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	position: fixed;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #deeff5;
+	margin: 0 auto;
+	box-shadow: -1px 1px 5px 2px rgba(0,0,0,.1),
+	-1px 1px 1px 0 rgba(255,255,255) inset
+	;
+}
+.icon-hao{
+	font-size: 30px;
+	color:#add8e6;
+}
+.create-content{
+	position: fixed;
+	bottom: 95px;
+	left: 20px;
+	right: 20px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+	-webkit-transform: scale(0) translateY(200%);
+	        transform: scale(0) translateY(200%);
+}
+.create-show{
+	opacity: 1;
+	-webkit-transform: scale(1) translateY(0);
+	        transform: scale(1) translateY(0);
+}
+.create-content-box{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 0 15px;
+	padding-right: 0;
+	border-radius: 50px;
+	background: #DEEFF5;
+	box-shadow: -1px 1px 5px 2px rgba(0,0,0,.1),
+	-1px 1px 1px  0 rgba(255,255,255) inset;
+	z-index: 0;
+}
+.create-input{
+	width: 100%;
+	padding-right: 15px;
+	color: #ADD8E6;
+}
+.create-button{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+	width: 80px;
+	height: 50px;
+	border-radius: 50px;
+	font-size: 16px; 
+	color: #88d4ec;
+	box-shadow: -2px 0px 2px 1px rgba(0,0,0,.1);
+}
+.create-content:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom:-8px;
+	margin: 0 auto;
+	width: 20px;
+	height: 20px;
+	background: #DEEFF5;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	box-shadow:1px 1px 5px 2px rgba(0,0,0,.1) ;
+	z-index: -1;
+}
+.create-content-box:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom:-8px;
+	margin: 0 auto;
+	width: 20px;
+	height: 20px;
+	background: #DEEFF5;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+.default{
+	padding-top: 100px;
+}
+.default-info_text{
+	text-align: center;
+	color: #ccc;
+	font-size: 14px;
+}
+.icon-hao{
+	-webkit-transition:-webkit-transform 0.5s;
+	transition:-webkit-transform 0.5s;
+	transition:transform 0.5s;
+	transition:transform 0.5s, -webkit-transform 0.5s;
+}
+.create-todo-active{
+	-webkit-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+
+
